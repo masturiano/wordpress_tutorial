@@ -1,0 +1,2 @@
+global $wpdb;
+	$count = $wpdb->get_var("Select count(*) from wp_posts");

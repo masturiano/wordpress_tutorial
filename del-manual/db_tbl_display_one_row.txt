@@ -1,0 +1,13 @@
+$post_downloads = get_posts($downloads);
+	if( $post_downloads ) :
+		echo '<ul>';
+		foreach($post_downloads as $post_download){
+			echo '<li>' . $post_download->ID . '</li>';
+			echo '<li>' . $post_download->post_date . '</li>';
+		}
+		echo '</ul>';
+	else 
+		:
+		echo '<p>' . __('No results found','aad') . '</p>';
+	endif;
+	die();

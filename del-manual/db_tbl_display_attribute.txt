@@ -1,0 +1,7 @@
+// Display from database
+	global $wpdb;
+	$row = $wpdb->get_results("Select * from wp_posts where ID=1");
+	foreach($row as $row){
+		echo $row->post_author;
+		echo "</br>";
+	}
